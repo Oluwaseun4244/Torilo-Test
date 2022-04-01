@@ -25,6 +25,10 @@ const [jobList, setJobList] = useState([])
     console.log("jobs 2", jobList.jobs);
   };
 
+  const setDetailsAndNavigate =()=>{
+    
+  }
+
   useEffect(() => {
     fetchJobs();
   }, []);

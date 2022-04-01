@@ -1,11 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-import { View, Image, Text, ScrollView,StyleSheet } from "react-native";
+import { View, Image, Text, ScrollView, StyleSheet } from "react-native";
 import React from "react";
 import Bar from "../components/Bar";
 import Button from "../components/Button";
 
-export default function Jobs({ navigation, route }) {
+export default function SingleJobPage({ navigation, route }) {
   const { company_name } = route.params;
 
   return (
@@ -86,15 +86,7 @@ export default function Jobs({ navigation, route }) {
             </View>
 
             <View style={{ flex: 0.5 }}>
-              <Button
-                style={{
-                  backgroundColor: "#fff",
-                  borderColor: "rgba(0,0,0,0.3)",
-                  borderTopWidth: 1,
-                  borderBottomWidth: 1,
-                  borderRightWidth: 1,
-                }}
-              >
+              <Button style={styles.companyBtn}>
                 <Text style={{ color: "#000" }}>Company</Text>
               </Button>
             </View>
@@ -102,40 +94,76 @@ export default function Jobs({ navigation, route }) {
 
           <View style={{ marginTop: 20 }}>
             <Text style={{ fontWeight: "700" }}>About the Opportunity</Text>
-            <Text style={{ color: "#000", fontSize: 12, fontWeight: "500", marginVertical: 10 }}>Calendly is a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti excepturi aspernatur odio dignissimos voluptate voluptatibus nam,
-               repellat quos libero delectus.</Text>
+            <Text
+              style={{
+                color: "#000",
+                fontSize: 12,
+                fontWeight: "500",
+                marginVertical: 10,
+              }}
+            >
+              Calendly is a Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Corrupti excepturi aspernatur odio dignissimos voluptate
+              voluptatibus nam, repellat quos libero delectus.
+            </Text>
           </View>
 
           <View style={{ marginTop: 20 }}>
             <Text style={{ fontWeight: "700" }}>Job Responsibilities</Text>
-           <View  
-            style={{
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <View
+                style={{
                   flexDirection: "row",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}>
-
-            <View style={{ flexDirection: "row",alignItems:"flex-start", marginBottom:15 }}>
-
-            <Entypo name="dot-single" style={{paddingTop: 10}} size={18} color="#000" />
-            <Text style={styles.resp}>One place with the best jobs companies tech. Apply to all of them with a signle profile and get in touch with hiring managers directly.</Text>
+                  alignItems: "flex-start",
+                  marginBottom: 15,
+                }}
+              >
+                <Entypo
+                  name="dot-single"
+                  style={{ paddingTop: 10 }}
+                  size={18}
+                  color="#000"
+                />
+                <Text style={styles.resp}>
+                  One place with the best jobs companies tech. Apply to all of
+                  them with a signle profile and get in touch with hiring
+                  managers directly.
+                </Text>
+              </View>
             </View>
-
-           </View>
-           <View  
-            style={{
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <View
+                style={{
                   flexDirection: "row",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}>
-
-            <View style={{ flexDirection: "row",alignItems:"flex-start", marginBottom:15 }}>
-
-            <Entypo name="dot-single" style={{paddingTop: 10}} size={18} color="#000" />
-            <Text style={styles.resp}>One place with the best jobs companies tech. Apply to all of them with a signle profile and get in touch with hiring managers directly.</Text>
+                  alignItems: "flex-start",
+                  marginBottom: 15,
+                }}
+              >
+                <Entypo
+                  name="dot-single"
+                  style={{ paddingTop: 10 }}
+                  size={18}
+                  color="#000"
+                />
+                <Text style={styles.resp}>
+                  One place with the best jobs companies tech. Apply to all of
+                  them with a signle profile and get in touch with hiring
+                  managers directly.
+                </Text>
+              </View>
             </View>
-
-           </View>
           </View>
         </View>
       </ScrollView>
@@ -168,9 +196,15 @@ export default function Jobs({ navigation, route }) {
   );
 }
 
-
 const styles = StyleSheet.create({
-resp: {
-  paddingTop: 10
-}
-})
+  resp: {
+    paddingTop: 10,
+  },
+  companyBtn: {
+    backgroundColor: "#fff",
+    borderColor: "rgba(0,0,0,0.3)",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 1,
+  },
+});

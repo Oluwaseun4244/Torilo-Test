@@ -98,21 +98,33 @@ export default function CompanyCard({item}) {
             {item.job_type}
             </Text>
           </View>
-        {["Remote", "Anywhere"].map((item, index) => (
-          <View
+        <View
             style={{
               padding: 5,
               backgroundColor: "rgba(255,255,255,0.3)",
               borderRadius: 4,
               flex: 0.3,
             }}
-            key={index}
+           
           >
-            <Text style={{ color: "#fff", fontSize: 10, textAlign: "center" }}>
-              {item}
+            <Text style={{ color: "#fff", fontSize: 10, textAlign: "center", textTransform: "capitalize" }}>
+            Remote
             </Text>
           </View>
-        ))}
+        <View
+            style={{
+              padding: 5,
+              backgroundColor: "rgba(255,255,255,0.3)",
+              borderRadius: 4,
+              flex: 0.3,
+            }}
+           
+          >
+            <Text style={{ color: "#fff", fontSize: 10, textAlign: "center", textTransform: "capitalize" }}>
+            Anywhere
+            </Text>
+          </View>
+
       </View>
     </View>
   );

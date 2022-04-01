@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./screens/Home";
 import FirstPage from "./screens/FirstPage";
 import { StatusBar } from "expo-status-bar";
-import Jobs from "./screens/Jobs";
+import SingleJobPage from "./screens/SingleJobPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +16,7 @@ function App() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Onbording" component={FirstPage} />
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="JobDetail" component={Jobs} />
+          <Stack.Screen name="JobDetail" component={SingleJobPage} />
         </Stack.Navigator>
       </NavigationContainer>
     </React.Fragment>
