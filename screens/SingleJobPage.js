@@ -10,7 +10,7 @@ export default function SingleJobPage({ navigation, route }) {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#eee" }}>
-      <Bar isBack title={item.company_name} />
+      <Bar isBack={true} title={item.company_name} />
 
       <ScrollView
         style={{

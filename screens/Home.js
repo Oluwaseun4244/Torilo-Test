@@ -22,11 +22,12 @@ const [jobList, setJobList] = useState([])
 
     const jobJson = await getjobs.json();
     setJobList(jobJson)
-    console.log("jobs 2", jobList.jobs);
   };
 
-  const setDetailsAndNavigate =()=>{
-    
+  const goToJobDetails =(item)=>{
+    navigation.navigate("JobDetail", {
+      item
+    })
   }
 
   useEffect(() => {
@@ -46,12 +47,7 @@ const [jobList, setJobList] = useState([])
         renderItem={({ item }) => (
           <JobCard
             item={item}
-            func={() => {
-              navigation.navigate("JobDetail", {
-                company_name: "Apple",
-                item
-              });
-            }}
+            func={()=>goToJobDetails(item)}
           />
         )}
       />

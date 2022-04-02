@@ -33,10 +33,8 @@ export default function Bar({ title = "", isBack = false }) {
         {title}
       </Text>
 
-      {!isBack ? (
+      {!isBack && (
         <Ionicons name="person-outline" size={24} color="black" />
-      ) : (
-        <View />
       )}
     </View>
   );
@@ -46,7 +44,7 @@ const styles = StyleSheet.create({
   barParent:{
     justifyContent: "space-between",
     alignItems: "center",
-    height: 80,
+    height: 60,
     flexDirection: "row",
     paddingHorizontal: 20,
     marginTop: STATUSBAR_HEIGHT,

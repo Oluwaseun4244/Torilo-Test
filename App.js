@@ -14,7 +14,7 @@ function App() {
       <StatusBar style="light" translucent hidden />
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Onbording" component={FirstPage} />
+          <Stack.Screen name="Firstpage" component={FirstPage} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="JobDetail" component={SingleJobPage} />
         </Stack.Navigator>

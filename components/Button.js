@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import React from "react";
 
 export default function Button({
@@ -18,15 +18,19 @@ export default function Button({
       }}
     >
       <Text
-        style={{
-          textAlign: "center",
-          color: "#fff",
-          fontSize: 15,
-          fontWeight: "700",
-        }}
+        style={styles.btnText}
       >
         {children}
       </Text>
     </TouchableOpacity>
   );
 }
+
+const styles = StyleSheet.create({
+  btnText: {
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 15,
+    fontWeight: "700",
+  }
+})
