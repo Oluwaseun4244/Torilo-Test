@@ -6,11 +6,11 @@ import Bar from "../components/Bar";
 import Button from "../components/Button";
 
 export default function SingleJobPage({ navigation, route }) {
-  const { company_name } = route.params;
+  const { company_name, item } = route.params;
 
   return (
     <View style={{ flex: 1, backgroundColor: "#eee" }}>
-      <Bar isBack title={company_name} />
+      <Bar isBack title={item.company_name} />
 
       <ScrollView
         style={{
@@ -24,7 +24,7 @@ export default function SingleJobPage({ navigation, route }) {
         <View style={{ alignItems: "center" }}>
           <Image
             source={{
-              uri: "https://play-lh.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw",
+              uri: `${item.company_logo}`,
             }}
             style={{
               height: 70,
@@ -43,10 +43,11 @@ export default function SingleJobPage({ navigation, route }) {
               marginTop: 15,
             }}
           >
-            Senior UI Designer
+            {item.category}
+            {/* Senior UI Designer */}
           </Text>
           <Text style={{ fontWeight: "600", marginVertical: 5 }}>
-            $50K - $60K
+            {item.salary? item.salary : "$50K - $60K"}
           </Text>
 
           <View
@@ -102,9 +103,11 @@ export default function SingleJobPage({ navigation, route }) {
                 marginVertical: 10,
               }}
             >
-              Calendly is a Lorem ipsum dolor sit amet, consectetur adipisicing
+
+              {item.description}
+              {/* Calendly is a Lorem ipsum dolor sit amet, consectetur adipisicing
               elit. Corrupti excepturi aspernatur odio dignissimos voluptate
-              voluptatibus nam, repellat quos libero delectus.
+              voluptatibus nam, repellat quos libero delectus. */}
             </Text>
           </View>
 

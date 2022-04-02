@@ -18,7 +18,7 @@ function Home({ navigation }) {
 
 const [jobList, setJobList] = useState([])
   const fetchJobs = async () => {
-    const getjobs = await fetch("https://remotive.io/api/remote-jobs?limit=5");
+    const getjobs = await fetch("https://remotive.io/api/remote-jobs?limit=15");
 
     const jobJson = await getjobs.json();
     setJobList(jobJson)
@@ -49,6 +49,7 @@ const [jobList, setJobList] = useState([])
             func={() => {
               navigation.navigate("JobDetail", {
                 company_name: "Apple",
+                item
               });
             }}
           />
